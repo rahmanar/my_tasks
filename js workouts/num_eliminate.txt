@@ -1,0 +1,4 @@
+var sentence;
+sentence = prompt("Enter the sentence");
+const withoutNumbers = sentence.replace(/[0-9]/g, '')
+alert(withoutNumbers);

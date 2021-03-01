@@ -1,0 +1,5 @@
+var sentence;
+sentence = prompt("Enter the sentence");
+const withoutNumbers = greeting.replace(/\d+/g, '')
+
+alert(withoutNumbers);

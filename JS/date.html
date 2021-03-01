@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <style>
+        </style>
+    </head>
+    <body>
+        <input type="date" id="a1">
+        <br><br>
+        <input type="date" id="a2">
+        <br><br>
+        <input type="button" value="click" onclick="click()">
+
+        <script>
+            function click(){
+                var x = new Date(document.getElementById("a1").value);
+                var y = new Date(document.getElementById("a2").value);
+                var z = Math.floor((Date.UTC(y.getFullYear(), y.getMonth(), y.getDate()) - Date.UTC(x.getFullYear(), x.getMonth(), x.getDate())) / (1000 * 60 * 60 * 24));
+                alert(z);
+            }
+    </script>
+    </body>
+</html>

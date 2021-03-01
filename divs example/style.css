@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+}
+div{
+    text-align: center;
+}
+footer{
+    text-align: center;
+}
+.top{
+    width: 100%;
+    height: 50px;
+    border: none;
+    display: flex;
+}
+
+.logo{
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: rgb(64, 173, 0);
+}
+.header{
+    width: 85%;
+    height: 50px;
+    border: none;
+    flex-direction: row;
+    background-color: chartreuse;
+}
+.naviBar{
+    width: 100%;
+    height: 50px;
+    border:none;
+    background-color: rgb(71, 71, 194);
+}
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+    /* margin-top: 30%; */
+}
+.content{
+    display: flex;
+    border: none;
+    height: 600px;
+    width: 100%;
+}
+.left{
+    height: 600px;
+    width: 40%;
+    border: none;
+    flex-direction: row;
+}
+.a{
+    height: 150px;
+    background-color: red;
+}
+.b{
+    height: 150px;
+    background-color: rgba(117, 12, 12, 0.37);
+}
+.c{
+    height: 300px;
+    background-color: rgb(187, 9, 9);
+}
+.center{
+    height: 600px;
+    width: 40%;
+    border: none;
+    flex-direction: row;
+}
+.p{
+    height: 200px;
+    background-color: rgb(5, 149, 197);
+}
+.q{
+    height: 400px;
+    background-color: rgb(173, 216, 230);
+}
+.right{
+    height: 600px;
+    width: 20%;
+    border:none;
+}
+.x{
+    height: 100px;
+    background-color: black;
+}
+.y{
+    height: 300px;
+    background-color: rgb(54, 50, 50);
+}
+.z{
+    height: 200px;
+    background-color: rgb(122, 103, 103);
+}

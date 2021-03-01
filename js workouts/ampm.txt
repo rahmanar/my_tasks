@@ -1,0 +1,9 @@
+var hours = new Date();
+var time =hours.getHours();
+if(hours>=12)
+{
+console.log("AM");
+}
+else{
+console.log("PM");
+}

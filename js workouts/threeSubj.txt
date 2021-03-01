@@ -1,0 +1,11 @@
+var a,b,c,Total,percent;
+a=parseInt(prompt("Enter the Tamil mark :"));
+b=parseInt(prompt("Enter the chemistry mark :"));
+c=parseInt(prompt("Enter the Physics mark :"));
+{
+Total=a+b+c;
+document.write("The total mark is :"+Total,"<br>");
+
+percent=Total/3;
+document.write("The percentage is :"+percent);
+}

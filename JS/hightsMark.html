@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+        <script> 
+            
+           var s=[];
+            for(i=0;i<=5;i++)
+            {
+                s.push(Number(prompt("Enter the number : ")));
+            }
+            var p = Math.max(...s)
+            var count = s.reduce(myMark,0);
+                   function myMark(counter, value)
+                   {
+                       return counter + (value === p);
+                   }
+                    
+            alert("Biggest number is "+p, "And Number of Times placed"+count)
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

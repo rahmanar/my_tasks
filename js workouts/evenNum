@@ -1,0 +1,7 @@
+var frstnum = window.prompt("Enter the first number: ");
+var lstnum = window.prompt("Enter the ending number: ");
+for(var i=frstnum;i<=lstnum;i++)
+{
+i++;
+console.log("The even numbers is :"+i);
+}

@@ -1,0 +1,48 @@
+
+<html>
+
+    <head>
+    
+        <style type="text/css">
+            body {
+                margin: 30px;
+            }
+            button{
+                height: 2%;
+                width: 4%;
+            }
+            table{
+                height: 10%;
+                width: 20%;
+            }
+        </style>
+        <script>
+            function createTable()
+            {
+                a = window.prompt("Input number of rows");
+                b = window.prompt("Input number of columns");
+    
+                for (var i = 0; i < parseInt(a); i++)
+                 {
+                    var x = document.getElementById('myTable').insertRow(i);
+                    for (var j = 0; j < parseInt(b); j++)
+                    {
+                        var y = x.insertCell(j);
+                        y.innerHTML = "A" + i + " B" + j;
+                    }
+                }
+            }
+    
+        </script>
+    </head>
+    
+    <body>
+        <table id="myTable" border="1px">
+        </table>
+        <br>
+        <form>
+            <input type="button" onclick="createTable()" value="Create the table">
+        </form>
+    </body>
+    
+    </html>

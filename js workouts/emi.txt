@@ -1,0 +1,13 @@
+    var p=prompt("Enter the actual amt")
+    var q=prompt("Enter paid amount")
+    var r=prompt("Enter the intrest")
+    var s=prompt("no of months")
+
+    var balance = p-q
+    var intrest = (balance/100)*r
+    var Amount = balance+intrest
+    alert("you will pay : "+Amount)
+    emi=Amount/s
+    var a = Math.round(emi)
+    alert("your EMI anount is : " +a)
+

@@ -1,0 +1,36 @@
+var a,b,c;
+
+str=prompt("Enter the message:"),"<br>");
+
+document.write("Please choose the following")
+b=parseInt(prompt("1 = Encrypt the message"),"<br>");
+b=parseInt(prompt("2 = Encrypt the message"),"<br>");
+
+switch(b)
+{
+case 1:
+	
+	for(var i=0;(i< 100 && str[i] != '\0');i++)
+	str[i] = str[i] + 3;
+	document.write("Encrypted string :"+str);
+	break;
+case 2:
+	for(var i=0;(i< 100 && str[i] != '\0');i++)
+	str[i] = str[i] - 3;
+	document.write("Decrypted string :"+str);
+	break;
+}
+
+
+var str=window.prompt("Enter the message");
+var n = str.charCodeAt(index);
+console.log(n);
+
+var sentence;
+
+sentence = "Cat"
+
+var splt = sentence.split("");
+var len = splt.length;
+
+console.log(len);

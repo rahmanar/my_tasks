@@ -1,0 +1,6 @@
+var sentence;
+sentence = promt("Enter the sentence");
+var splt = sentence.split(" ");
+var indiv = [...new Set(splt)];
+var Correct_sentence = indiv.join(" ");
+document.write(Correct_sentence);

@@ -1,0 +1,9 @@
+var Number,fact=1;
+var Number = window.prompt("Enter the Number: ");
+{
+for(var i=1;i<=Number;i++)
+{
+fact=fact*i;
+}
+console.log("The factorial of the given number is :"+fact);
+}

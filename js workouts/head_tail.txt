@@ -1,0 +1,6 @@
+  var x=Math.random();
+    if (x<=0.5){
+        alert("HEAD")
+    }else{
+        alert("TAIL")
+    }

@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <title>Dom handling</title>
+    <style>
+
+    </style>
+    <script>
+
+/*
+// Run these lines first to save the list in local storage. 
+        let list = [{
+            name: 'Apple',
+            price: 10
+        }, {
+            name: 'Orange',
+            price: 20
+        }, {
+            name: 'Mango',
+            price: 30
+        }];
+        localStorage.setItem('list',JSON.stringify(list));
+*/
+
+        function loadAll() {
+            let tableEl = document.querySelector('table');
+            let trEl = document.createElement('tr');
+
+            let tdName = document.createElement('td');
+            let tdPrice = document.createElement('td');
+            let tdQty = document.createElement('td');
+            let tdTotalPrice = document.createElement('td');
+
+            tableEl.appendChild(trEl);
+
+            trEl.appendChild(tdName);
+            trEl.appendChild(tdPrice);
+            trEl.appendChild(tdQty);
+            trEl.appendChild(tdTotalPrice);
+
+            let selectEl = document.createElement('select');
+            tdName.appendChild(selectEl);
+
+            let priceInputEl = document.createElement('input');
+            tdPrice.appendChild(priceInputEl);
+            priceInputEl.type = 'number';
+            
+            let qtyInputEl = document.createElement('input');
+            tdQty.appendChild(qtyInputEl);
+            qtyInputEl.type = 'number';
+            qtyInputEl.value = 1;
+            
+            tdTotalPrice.innerText = 0;
+
+            let list = [];
+            let a = localStorage.getItem('list');
+            if (a) {
+                list = JSON.parse(a);
+            }
+
+            console.log('item list', list);
+
+            // for (let i = 0; i < list.length; i++) {
+            //     let x = list[0];
+            // }
+
+            list.forEach((x) => {
+                let optionEl = document.createElement('option');
+                selectEl.appendChild(optionEl);
+                optionEl.innerText = x.name;
+            });
+            selectEl.value = "";
+
+            selectEl.onchange = () => {
+                console.log('Select Changed', selectEl.value);
+                let x = list.find(x => x.name === selectEl.value);
+                priceInputEl.value = x.price;
+                let total = x.price * qtyInputEl.value;
+                tdTotalPrice.innerText = total;
+            };
+
+            priceInputEl.oninput = () => {
+                let total = priceInputEl.value * qtyInputEl.value;
+                tdTotalPrice.innerText = total;
+            }
+
+            qtyInputEl.oninput = () => {
+                let total = priceInputEl.value * qtyInputEl.value;
+                tdTotalPrice.innerText = total;
+            }
+
+
+
+        }
+    </script>
+</head>
+
+<body onload="loadAll()">
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Total</th>
+        </tr>
+    </table>
+
+    <button onclick="loadAll()">Add Row</button>
+    <pre>
+        1. Create Table 
+        2. 
+    </pre>
+</body>
+
+</html>

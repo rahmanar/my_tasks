@@ -1,0 +1,17 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <P id="sum"></P>
+        <script>
+            var a=3;
+            var b=4;
+            var c=5;
+            var d;
+            d = a+b+c;
+            document.getElementById("sum").innerHTML = d;
+        </script>
+    </body>
+</html>
